@@ -1,0 +1,335 @@
+﻿.banner {
+    background-color: #f2f2f2; /* Light grey background */
+    color: #ffd700; /* Yellowish gold text color */
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.logo {
+    width: 400px; /* Adjust the size of the logo */
+    height: auto;
+}
+
+.banner-container{
+    background-color: #f2f2f2; /* Light grey background */
+    color: #ffd700; /* Yellowish gold text color */
+    padding: 20px 0; /* Ensure both banners have the same padding */
+    text-align: center;
+    width: 100%;
+}
+
+.banner-info-container {
+    background-color: #f2f2f2; /* Light grey background */
+    color: #ffd700; /* Yellowish gold text color */
+    padding: 20px 0; /* Ensure both banners have the same padding */
+    text-align: center;
+    width: 100%;
+    display: flex; /* Applies flexbox layout to both banner containers */
+    justify-content: space-between; /* Evenly spaces elements within the container */
+    align-items: center; /* Aligns items vertically in the center */
+}
+
+    .banner-info-container > * {
+        flex: 1; /* Each child takes equal width */
+        text-align: center; /* Centers text within each child */
+        padding: 0 10px; /* Adds padding to each child for better spacing */
+    }
+
+    .banner-container .logo-container,
+    .banner-container .text-container {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+.text-container {
+    flex: 1; /* Take up all available space */
+    text-align: center; /* Center align the text within the container */
+}
+
+.stout-phone-number {
+    text-align: left; /* Left align the phone number */
+    color: #ffd700 !important;
+}
+
+.routing-number {
+    text-align: center; /* Center align the routing number */
+    color: black !important; /* Override other styles */
+}
+
+.logout-link {
+    text-align: right; /* Right align the logout link */
+    color: black !important; /* Override other styles */
+}
+
+
+
+
+
+.logo-small {
+    width: 200px; /* Adjust the size of the logo */
+    height: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-container {
+    text-align: left; /* Align text to the left */
+}
+
+h1 {
+    font-size: 50px; /* Increase the font size of the heading */
+}
+
+.slogan {
+    font-size: 34px; /* Increase the font size of the slogan */
+    margin-top: 5px;
+}
+
+.login-and-signup-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.login-container, .button-container {
+    width: 45%;
+    text-align: center;
+}
+
+.login-container {
+    margin-right: 5%;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffd700;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+    .button:hover {
+        background-color: #f3c500;
+        color: #333;
+    }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #ffd700; /* Yellow background */
+    color: #ffffff; /* White text color */
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.stout-phone-number {
+    color: #ffffff; /* White text color */
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 20px; /* Add right margin for spacing */
+    float: left; /* Align to the left */
+}
+
+.routing-number {
+    color: #ffffff; /* White text color */
+    display: inline-block; /* Center the element */
+}
+
+.logout-link {
+    color: #ffffff; /* White text color */
+    text-decoration: none;
+    float: right; /* Align to the right */
+}
+
+    .logout-link img {
+        max-height: 20px; /* Set maximum height for the image */
+        vertical-align: middle; /* Align vertically with text */
+        margin-left: 5px; /* Add a small margin to the left */
+    }
+/* Secondary Banner */
+.secondary-banner {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 20px 0;
+    text-align: center; /* Center content horizontally */
+}
+
+.logo img {
+    max-height: 100px; /* Set maximum height for the logo */
+    vertical-align: middle; /* Align vertically with text */
+}
+
+.welcome-message {
+    font-size: 24px;
+    color: #003366; /* Dark blue text color */
+}
+
+
+/* Task bar container */
+.task-bar {
+    background-color: #333; /* Dark background color */
+    padding: 10px 0; /* Add padding */
+}
+
+    /* Task bar list items */
+    .task-bar ul li {
+        display: inline-block; /* Display list items horizontally */
+        margin-right: 20px; /* Add spacing between list items */
+    }
+
+        /* Task bar links */
+        .task-bar ul li a {
+            color: #ffffff; /* White text color */
+            text-decoration: none; /* Remove underline */
+        }
+
+            /* Style for active link */
+            .task-bar ul li a.active {
+                color: #ffd700; /* Yellowish gold text color */
+            }
+
+.container-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checking-container, .savings-container, .recent-transactions-container, .create-account-container {
+    flex: 1 1 calc(50% - 20px);
+    background-color: #f2f2f2; /* Light grey background */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+    .checking-container h2, .savings-container h2, .recent-transactions-container h2, .create-account-container h2 {
+        color: #333; /* Dark grey text color */
+    }
+
+    .checking-container p, .savings-container p, .recent-transactions-container p, .create-account-container p {
+        color: #666; /* Medium grey text color */
+    }
+
+.banking-person-image {
+    width: 50%; /* Adjust as needed */
+}
+
+.bell {
+    flex: 0 0 auto; /* Do not grow or shrink, keep the content-based size */
+    position: relative; /* Necessary for absolute positioning of the red dot */
+    display: inline-block; /* Ensures the anchor behaves like a block element */
+    padding: 0; /* Overrides any other padding settings that might push the bell icon */
+}
+
+    .bell img {
+        display: block; /* Removes extra space around the images */
+        height: auto; /* Maintains original image proportions */
+        width: auto; /* Maintains original image proportions */
+    }
+
+    .bell .notification-dot {
+        position: absolute; /* Positions relative to the nearest positioned ancestor (the .bell) */
+        bottom: 0; /* Position at the bottom of the bell */
+        right: 0; /* Position at the right of the bell */
+        width: 10px; /* Set the width of the red dot */
+        height: 10px; /* Set the height of the red dot */
+        margin-bottom: -5px; /* Optionally adjust this value to move the dot slightly outside */
+        margin-right: -5px; /* Optionally adjust this value to move the dot slightly outside */
+    }
+
+    .message-container {
+        width: 100%; /* Full width */
+        background-color: #f2f2f2; /* Light grey background */
+        padding: 20px; /* Padding inside the container, adjust to ensure the text aligns nicely */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Shadow for depth */
+        text-align: left; /* Align the text to the left */
+        border: 1px solid #ccc; /* Light border */
+        margin-top: 20px; /* Space above the container */
+        display: flex; /* Flexbox to align items inline */
+        align-items: center; /* Center items vertically within the container */
+    }
+
+    .red-dot {
+        margin-right: 15px; /* Space between the red dot and the message */
+        height: 20px; /* Height of the red dot */
+        width: 20px; /* Width of the red dot */
+        flex-shrink: 0; /* Prevents the image from shrinking */
+    }
+
+
+/* Full-screen slide styling */
+.full-screen {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to the left and top */
+    align-items: flex-start; /* Align items to the start (left) */
+    text-align: left; /* Text aligned to the left */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Slideshow container */
+#slideshow-container {
+    max-width: 100%; /* Full width */
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the slides */
+.mySlides {
+    display: none;
+    width: 100%; /* Full width */
+    padding: 20px; /* Add padding for better layout */
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: static; /* Remove absolute positioning */
+    width: auto;
+    margin-top: 10px; /* Adjust top margin for vertical positioning */
+    padding: 10px 16px; /* Adjust padding */
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    user-select: none;
+    display: inline-block; /* Display buttons inline */
+    background-color: #444; /* Background color for visibility */
+}
+
+/* Navigation container */
+.navigation-buttons {
+    text-align: center; /* Center align the navigation buttons */
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+

@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stout Bank - Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="banner-small">
+        <div class="container">
+            <div class="logo-container">
+                <img src="img/stout.png" alt="Stout Bank Logo" class="logo-small">
+            </div>
+
+            <div class="text-container">
+                <h1>Welcome to Stout Bank</h1>
+                <p class="slogan">Bank on Stout: Where Stability Meets Service</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <p>New Stout Bank checking customers can enjoy $300.</p>
+            <div class="form-container">
+                <h2>Create an Account</h2>
+                <form action="signup_proc.php" method="post"> <!--Signup Form to signup_proc.php-->
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="first_name" required><br>
+                    
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="last_name" required><br>
+
+                    <label for="birthdate">Birthdate:</label>
+                    <input type="date" id="birthdate" name="birthdate" required><br>
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                    You must be at least 18 years old.
+                    </small>
+                    <br>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required><br>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                        
+                    </small>
+                    <div id="passwordStrength" class="strength-meter"></div>
+                    <br>
+
+                    <input type="submit" value="Sign Up">
+                </form>
+            </div>
+
+            <div class="button-container">
+                <a href="portal.html" class="button">Back to Portal</a>
+            </div>
+        </div>
+    </main>
+
+    <script> // Real-Time Password Strength Checker
+        document.getElementById('password').addEventListener('input', function() {
+            var password = this.value;
+            var strengthText = document.getElementById('passwordStrength');
+            var minLength = password.length >= 8;
+            var upperCase = /[A-Z]/.test(password);
+            var lowerCase = /[a-z]/.test(password);
+            var number = /[0-9]/.test(password);
+            var specialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+            if (minLength && upperCase && lowerCase && number && specialChar) {
+                strengthText.textContent = 'Password is strong.';
+                strengthText.style.color = 'green';
+            } else {
+                strengthText.textContent = 'Password must be at least 8 characters long, include uppercase and lowercase letters, a number, and a special character.';
+                strengthText.style.color = 'red';
+            }
+        });
+    </script>
+
+</body>
+
+</html>

